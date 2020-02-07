@@ -7,7 +7,7 @@ tags:
   - embeds
 ---
 
-This post contains iframe embedded elements that are wrapped inside a css class to let you to add custom style. Here's an example of a Codepen embed.
+This post contains `iframe` embedded elements, wrapped inside of a CSS class. That allows you to add custom styles to match the visual look of embeds better for your needs. You can customize the CSS class name by adjusting `iframesClass` from the main `config.json` file. Here is an example of a CodePen embed.
 
 <iframe height="500" style="width: 100%;" scrolling="no" title="Border Radius Morphing" src="https://codepen.io/equinusocio/embed/jezBdZ?height=300&theme-id=10535&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/equinusocio/pen/jezBdZ'>Border Radius Morphing</a> by Mattia Astorino

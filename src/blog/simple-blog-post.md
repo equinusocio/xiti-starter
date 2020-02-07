@@ -7,16 +7,16 @@ tags:
   - native-elements
 ---
 
-This is a sample blog post to demostrate how posts look with Native Elements. All the content of this article is inside a markdown file which is transformed by Eleventy into an HTML page.
+This is a sample blog post to demonstrate how posts look with the Native Elements. All the content of this article is inside a Markdown file. [Eleventy](https://www.11ty.dev/ "Eleventy, a simpler static site generator") transforms that file into an HTML page.
 
-This starter use [Native Elements](https://native-elements.stackblitz.io) css to add a basic style to native html elements without any extra framework. You can customize it by setting their global custom properties inside the `:root` css selector.
+This starter uses [Native Elements](https://native-elements.stackblitz.io) CSS to add a basic style to native HTML elements without any extra framework. You can customize it by setting their global custom properties inside the `:root` CSS selector.
 
 For example, this is a `blockquote` with a basic style:
 
 > Less is more. Isn't it?
 > <cite>by Someone</cite>
 
-Bullet list with some typography elements
+Bullet list with some typography elements:
 
 - Sed posuere consectetur est at lobortis
 - Aenean lacinia <del>bibendum</del> <ins>nulla</ins> sed consectetur
@@ -26,9 +26,9 @@ Bullet list with some typography elements
 
 ---
 
-## Code highlight
+## Code highlights
 
-XITY provides code highlighting using prism, by default it uses the [Material Theme Lighter](https://github.com/PrismJS/prism-themes/tree/master/themes) as color scheme. If you want to change the theme, put the `css` file inside the `assets/css` folder and set the name inside `_data/config.json`.
+XITY provides code highlighting using [Prism](https://prismjs.com/). By default it uses the [Material Theme Lighter](https://github.com/PrismJS/prism-themes/tree/master/themes) as a color scheme. If you want to change the theme, put the `css` file inside the `assets/css` folder and set the name inside `_data/config.json`.
 
 ```jsx
 const MyComponent = props => (
@@ -38,7 +38,7 @@ const MyComponent = props => (
 )
 ```
 
-... and here some css code with line highlight
+... and here are some CSS code with a line highlight:
 
 ```css/1,3-4
 :root {
