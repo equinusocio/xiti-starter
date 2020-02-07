@@ -1,6 +1,6 @@
 ![XITY Starter](https://repository-images.githubusercontent.com/234711727/fbefa980-45e0-11ea-8f4e-1250f14a82a5)
 
-A blog-ready 11ty starter based on PostCSS and Parcel, width RSS feed and Native Elements.
+A blog-ready 11ty starter based on PostCSS and Parcel, with a RSS feed and Native Elements.
 
 ## Key features
 
@@ -16,7 +16,7 @@ A blog-ready 11ty starter based on PostCSS and Parcel, width RSS feed and Native
 
 🎚 Configuration file to set meta data and global settings.
 
-🎨 Code highlight which you can disable with a flag.
+🎨 Code highlights which you can disable with a flag.
 
 ⚡️ Superpowered HTML elements with [**Native Elements**](https://native-elements.stackblitz.io).
 

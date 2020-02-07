@@ -1,5 +1,6 @@
 {
-  "items": [{
+  "items": [
+    {
       "text": "Home",
       "url": "/",
       "external": false
@@ -15,7 +16,7 @@
       "external": false
     },
     {
-      "text": "Github",
+      "text": "GitHub",
       "url": "https://github.com/equinusocio/xity-starter",
       "external": true
     }
