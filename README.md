@@ -18,7 +18,7 @@ A blog-ready 11ty starter based on PostCSS and Parcel, with a RSS feed and Nativ
 
 🎨 Code highlights which you can disable with a flag.
 
-⚡️ Superpowered HTML elements with [Native Elements][].
+⚡️ Superpowered HTML elements with **[Native Elements][]**.
 
 ⚠️ Custom 404 page layout
 
