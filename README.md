@@ -8,7 +8,7 @@ A blog-ready 11ty starter based on PostCSS and Parcel, with a RSS feed and Nativ
 
 💅 [PostCSS][] with [PostCSS Preset Env][] and [cssnano][] to enhance and clean your css.
 
-🏅 No <abbr title="Cascade Style Sheet">CSS</abbr> or <abbr title="JavaScript">JS</abbr> frameworks to remove. Just add what you need.
+🏅 No <abbr title="Cascading Style Sheets">CSS</abbr> or <abbr title="JavaScript">JS</abbr> frameworks to remove. Just add what you need.
 
 📝 Basic blog structure.
 
