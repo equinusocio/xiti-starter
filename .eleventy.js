@@ -12,21 +12,26 @@ const fs = require('fs')
  */
 const siteConfig = require('./src/_data/config.json')
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   /**
    * Add custom watch targets
    *
    * @link https://www.11ty.dev/docs/config/#add-your-own-watch-targets
    */
-  eleventyConfig.addWatchTarget('./assets/')
+  eleventyConfig.addWatchTarget('./bundle/')
 
   /**
    * Passthrough file copy
    *
    * @link https://www.11ty.io/docs/copy/
    */
-  eleventyConfig.addPassthroughCopy({ './static': '.' })
-  eleventyConfig.addPassthroughCopy(`./assets/css/${siteConfig.syntaxTheme}`)
+  eleventyConfig.addPassthroughCopy({
+    './static': '.'
+  })
+  eleventyConfig.addPassthroughCopy(`./src/assets/css/${siteConfig.syntaxTheme}`)
+  eleventyConfig.addPassthroughCopy({
+    bundle: 'assets'
+  })
 
   /**
    * Add filters
@@ -71,10 +76,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection('posts', collection => {
     return [
       ...collection
-        .getFilteredByGlob(
-          `./${siteConfig.paths.src}/${siteConfig.paths.blogdir}/**/*`
-        )
-        .filter(livePosts),
+      .getFilteredByGlob(
+        `./${siteConfig.paths.src}/${siteConfig.paths.blogdir}/**/*`
+      )
+      .filter(livePosts),
     ]
   })
 
@@ -89,14 +94,14 @@ module.exports = function(eleventyConfig) {
     snippetOptions: {
       rule: {
         match: /<\/head>/i,
-        fn: function(snippet, match) {
+        fn: function (snippet, match) {
           return snippet + match
         },
       },
     },
     // Set local server 404 fallback
     callbacks: {
-      ready: function(err, browserSync) {
+      ready: function (err, browserSync) {
         const content_404 = fs.readFileSync('dist/404.html')
 
         browserSync.addMiddleware('*', (req, res) => {
@@ -107,6 +112,12 @@ module.exports = function(eleventyConfig) {
       },
     },
   })
+
+  /*
+   * Disable use gitignore for avoiding ignoring of /bundle folder during watch
+   * https://www.11ty.dev/docs/ignores/#opt-out-of-using-.gitignore
+   */
+  eleventyConfig.setUseGitIgnore(false);
 
   /**
    * Eleventy configuration object
