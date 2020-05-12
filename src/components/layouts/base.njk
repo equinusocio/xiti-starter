@@ -8,19 +8,27 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@0.6.0/modern-normalize.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@native-elements/core/dist/native-elements.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/what-input@5.2.6/dist/what-input.min.js"></script>
+     {% block head %}{% endblock %}
+
+    {% if env.IS_DEV %}
+      <link rel="stylesheet" href="/assets/css/app.css" />
+    {% else %}
+      <style>{% include "../../../dist/assets/css/app.css" %}</style>
+    {% endif %}
+
+    <script src="https://cdn.jsdelivr.net/npm/what-input@5.2.6/dist/what-input.min.js" defer></script>
     <script src="/assets/js/app.js" defer></script>
-    {% block head %}{% endblock %}
-    <style>{% include "../../../dist/assets/css/app.css" %}</style>
   </head>
   <body>
     {% block content %}{% endblock content %}
     <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/service-worker.js');
-        });
-      }
+      {% if not env.IS_DEV %}
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+          });
+        }
+      {% endif %}
     </script>
   </body>
 </html>
