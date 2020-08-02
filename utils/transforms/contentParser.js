@@ -10,7 +10,7 @@ function setClass(element, list) {
 module.exports = function(value, outputPath) {
   if (outputPath.endsWith('.html')) {
     /**
-     * create the document model
+     * Create the document model
      */
     const DOM = new JSDOM(value)
     const document = DOM.window.document
@@ -23,7 +23,7 @@ module.exports = function(value, outputPath) {
       images.forEach(image => {
         /**
          * Set the loading attribute to all
-         * the images to be lazy loaded if supported
+         * the images to be lazy loaded (if supported)
          */
         image.setAttribute('loading', 'lazy')
         /**
@@ -42,7 +42,7 @@ module.exports = function(value, outputPath) {
           figCaption.innerHTML = `<small>${image.getAttribute('title')}</small>`
           image.removeAttribute('title')
           /**
-           * Add custom class to the figure elements inside posts
+           * Add a custom class to the figure elements inside posts
            */
           setClass(figure, eleventyConfig.figureClass)
           /**
@@ -69,8 +69,8 @@ module.exports = function(value, outputPath) {
     ]
     if (articleHeadings.length) {
       /**
-       * Create an ahcor element inside each post heading
-       * to link to the secion
+       * Create an anchor element inside each post heading
+       * to link to the section
        */
       articleHeadings.forEach(heading => {
         // Create the anchor element
@@ -104,7 +104,7 @@ module.exports = function(value, outputPath) {
     }
     /**
      * Get all the code snippets and wrap them
-     * inside a div to apply custom style
+     * inside a div to apply a custom style
      */
     const codeSnippets = [...document.querySelectorAll('pre[class^="language"')]
     if (codeSnippets.length) {
@@ -139,7 +139,7 @@ module.exports = function(value, outputPath) {
         }
         /**
          * If the link starts with http or https
-         * appen the "noopener" value to the rel attribute
+         * append a "noopener" value to the rel attribute
          */
         const getHref = link.getAttribute('href')
         const currentRel = link.getAttribute('rel')
