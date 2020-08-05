@@ -130,7 +130,7 @@ module.exports = function(value, outputPath) {
         const externalLink = document.createElement('a')
         if (link.hasAttributes()) {
           const linkAttributes = link.attributes
-          for (var i = linkAttributes.length - 1; i >= 0; i--) {
+          for (let i = linkAttributes.length; i--; ) {
             externalLink.setAttribute(
               linkAttributes[i].name,
               linkAttributes[i].value
