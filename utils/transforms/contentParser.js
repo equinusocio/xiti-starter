@@ -4,10 +4,10 @@ const slugify = require('slugify')
 const eleventyConfig = require('../../src/_data/config.json')
 
 function setClass(element, list) {
-  list.map(item => element.classList.add(item))
+  list.map((item) => element.classList.add(item))
 }
 
-module.exports = function(value, outputPath) {
+module.exports = function (value, outputPath) {
   if (outputPath.endsWith('.html')) {
     /**
      * Create the document model
@@ -20,7 +20,7 @@ module.exports = function(value, outputPath) {
      */
     const images = [...document.querySelectorAll('main article img')]
     if (images.length) {
-      images.forEach(image => {
+      images.forEach((image) => {
         /**
          * Set the loading attribute to all
          * the images to be lazy loaded (if supported)
@@ -72,7 +72,7 @@ module.exports = function(value, outputPath) {
        * Create an anchor element inside each post heading
        * to link to the section
        */
-      articleHeadings.forEach(heading => {
+      articleHeadings.forEach((heading) => {
         // Create the anchor element
         const anchor = document.createElement('a')
         // Create the anchor slug
@@ -94,7 +94,7 @@ module.exports = function(value, outputPath) {
      */
     const articleEmbeds = [...document.querySelectorAll('main article iframe')]
     if (articleEmbeds.length) {
-      articleEmbeds.forEach(embed => {
+      articleEmbeds.forEach((embed) => {
         const wrapper = document.createElement('div')
         embed.setAttribute('loading', 'lazy')
         setClass(wrapper, eleventyConfig.iframeClass)
@@ -108,7 +108,7 @@ module.exports = function(value, outputPath) {
      */
     const codeSnippets = [...document.querySelectorAll('pre[class^="language"')]
     if (codeSnippets.length) {
-      codeSnippets.forEach(embed => {
+      codeSnippets.forEach((embed) => {
         const wrapper = document.createElement('div')
         setClass(wrapper, eleventyConfig.codeClass)
         wrapper.appendChild(embed.cloneNode(true))
@@ -122,7 +122,7 @@ module.exports = function(value, outputPath) {
      */
     const links = [...document.querySelectorAll('a[href]')]
     if (links.length) {
-      links.forEach(link => {
+      links.forEach((link) => {
         /**
          * For each link found get all the original attributes
          * and apply them to the custom link element
@@ -142,15 +142,21 @@ module.exports = function(value, outputPath) {
          * append a "noopener" value to the rel attribute
          */
         const getHref = link.getAttribute('href')
-        const currentRel = link.getAttribute('rel')
-        const isExternal =
-          getHref.startsWith('http') || getHref.startsWith('https')
+        const currentRel = link.getAttribute('rel') || ''
+        const isExternal = getHref.startsWith('http')
         if (isExternal) {
           externalLink.setAttribute(
             'rel',
-            currentRel && !currentRel.includes('noopener')
-              ? `${currentRel} noopener noreferrer`
-              : 'noopener noreferrer'
+            [
+              ...new Set(
+                currentRel
+                  .split(/\s+/)
+                  .filter((relValStr) => relValStr.trim())
+                  .map((relValStr) => relValStr.toLowerCase())
+                  .concat(['noopener', 'noreferrer'])
+                  .sort()
+              ),
+            ].join(' ')
           )
         }
         externalLink.innerHTML = link.innerHTML

@@ -22,7 +22,8 @@
     "watch:assets": "parcel watch ./src/assets/css/app.pcss ./src/assets/js/app.js --dist-dir ./bundle --no-source-maps --no-hmr",
     "dev": "yarn watch",
     "update:deps": "yarn upgrade-interactive --latest && yarn upgrade",
-    "update:cssdb": "npx browserslist@latest --update-db"
+    "update:cssdb": "npx browserslist@latest --update-db",
+    "test": "jest"
   },
   "dependencies": {
     "@11ty/eleventy": "0.11.0",
@@ -44,6 +45,7 @@
   },
   "devDependencies": {
     "cross-env": "7.0.2",
+    "jest": "^26.3.0",
     "npm-run-all": "4.1.5",
     "parcel": "^2.0.0-beta.1",
     "postcss-cli": "7.1.1",
