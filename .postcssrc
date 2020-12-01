@@ -13,9 +13,6 @@
           "reduceIdents": false
         }
       ]
-    },
-    "postcss-reporter": {
-      "clearReportedMessages": true
     }
   }
 }

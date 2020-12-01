@@ -25,29 +25,28 @@
     "update:cssdb": "npx browserslist@latest --update-db"
   },
   "dependencies": {
-    "@11ty/eleventy": "0.11.0",
+    "@11ty/eleventy": "0.11.1",
     "@11ty/eleventy-plugin-rss": "1.0.9",
-    "@11ty/eleventy-plugin-syntaxhighlight": "3.0.1",
-    "@babel/core": "7.11.6",
-    "@babel/preset-env": "7.11.5",
+    "@11ty/eleventy-plugin-syntaxhighlight": "3.0.4",
+    "@babel/core": "7.12.9",
+    "@babel/preset-env": "7.12.7",
     "@tbranyen/jsdom": "13.0.0",
     "cssnano": "4.1.10",
     "cssnano-preset-advanced": "4.0.7",
     "eleventy-plugin-pwa": "1.0.8",
     "html-minifier": "4.0.0",
-    "markdown-it": "11.0.1",
+    "markdown-it": "12.0.2",
     "postcss-preset-env": "6.7.0",
-    "postcss-reporter": "6.0.1",
-    "slugify": "1.4.5",
+    "slugify": "1.4.6",
     "turbolinks": "5.2.0",
     "what-input": "5.2.10"
   },
   "devDependencies": {
-    "cross-env": "7.0.2",
+    "cross-env": "7.0.3",
     "npm-run-all": "4.1.5",
     "parcel": "next",
     "postcss-cli": "7.1.2",
-    "prettier": "2.1.2",
+    "prettier": "2.2.1",
     "rimraf": "3.0.2"
   },
   "browserslist": [
