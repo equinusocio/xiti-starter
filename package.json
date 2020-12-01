@@ -10,16 +10,16 @@
     "url": "https://github.com/equinusocio/xity-starter"
   },
   "scripts": {
-    "clean": "run-s clean:*",
+    "clean": "run-s clean:* && ",
     "clean:cache": "rimraf ./.cache",
     "clean:dist": "rimraf ./dist",
-    "clean:bundle": "rimraf ./bundle",
+    "clean:bundle": "rimraf ./bundle && clear",
     "build": "cross-env ELEVENTY_ENV=production run-s clean:* build:assets build:html",
     "build:html": "eleventy",
     "build:assets": "parcel build ./src/assets/css/app.pcss ./src/assets/js/app.js --dist-dir ./bundle --no-source-maps",
     "watch": "cross-env ELEVENTY_ENV=development run-s clean:* build:assets && run-p serve watch:*",
     "serve": "eleventy --serve --port=8080",
-    "watch:assets": "parcel watch ./src/assets/css/app.pcss ./src/assets/js/app.js --dist-dir ./bundle --no-source-maps --no-hmr",
+    "watch:assets": "clear && parcel watch ./src/assets/css/app.pcss ./src/assets/js/app.js --dist-dir ./bundle --no-source-maps --no-hmr && clear",
     "dev": "yarn watch",
     "update:deps": "yarn upgrade-interactive --latest && yarn upgrade",
     "update:cssdb": "npx browserslist@latest --update-db"
