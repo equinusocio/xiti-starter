@@ -31,7 +31,6 @@
     "@babel/core": "7.12.9",
     "@babel/preset-env": "7.12.7",
     "@tbranyen/jsdom": "13.0.0",
-    "add": "^2.0.6",
     "cssnano": "4.1.10",
     "cssnano-preset-advanced": "4.0.7",
     "eleventy-plugin-pwa": "1.0.8",
@@ -42,13 +41,12 @@
     "postcss-preset-env": "6.7.0",
     "slugify": "1.4.6",
     "turbolinks": "5.2.0",
-    "what-input": "5.2.10",
-    "yarn": "^1.22.10"
+    "what-input": "5.2.10"
   },
   "devDependencies": {
     "cross-env": "7.0.3",
     "npm-run-all": "4.1.5",
-    "parcel": "^2.0.0-nightly.474",
+    "parcel": "2.0.0-nightly.477",
     "postcss-cli": "8.3.0",
     "prettier": "2.2.1",
     "rimraf": "3.0.2"
