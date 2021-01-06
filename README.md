@@ -30,7 +30,7 @@ A blog-ready 11ty starter based on PostCSS and Parcel, with a RSS feed and Nativ
 
 - [Eleventy][] for templates and site generation
 - [PostCSS][] and [PostCSS Preset Env][] to process your CSS
-- [cssnano][] to minimize, merge and optimize the CSS ouput
+- [cssnano][] to minimize, merge and optimize the CSS output
 - [Parcel][] for a simple asset build pipeline
 - [Turbolinks][] makes navigating your web application faster
 - [What Input][] to show outline only when navigating with keyboard
