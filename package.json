@@ -13,7 +13,7 @@
     "clean": "run-s clean:* && ",
     "clean:cache": "rimraf ./.cache",
     "clean:dist": "rimraf ./dist",
-    "clean:bundle": "rimraf ./bundle && clear",
+    "clean:bundle": "rimraf ./bundle",
     "build": "cross-env ELEVENTY_ENV=production run-s clean:* build:assets build:html",
     "build:html": "eleventy",
     "build:assets": "parcel build ./src/assets/css/app.css ./src/assets/js/app.js --dist-dir ./bundle --no-source-maps",
