@@ -13,8 +13,7 @@
     "start": "snowpack dev",
     "build": "snowpack build",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1",
-    "format": "prettier --write \"src/**/*.js\"",
-    "lint": "prettier --check \"src/**/*.js\"",
+    "lint": "prettier --write .",
     "update:deps": "yarn upgrade-interactive --latest && yarn upgrade",
     "update:cssdb": "npx browserslist@latest --update-db"
   },

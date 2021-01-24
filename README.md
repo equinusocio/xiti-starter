@@ -73,7 +73,7 @@ yarn install
 This command will run `elventy` and the `snowpack` with auto reload.
 
 ```bash
-yarn dev
+yarn start
 ```
 
 ### Building the production version
