@@ -63,7 +63,9 @@ module.exports = function (value, outputPath) {
      * Get all the headings inside the post
      */
     const articleHeadings = [
-      ...document.querySelectorAll('article h2, article h3, article h4, article h5, article h6'),
+      ...document.querySelectorAll(
+        'article h2, article h3, article h4, article h5, article h6',
+      ),
     ]
     if (articleHeadings.length) {
       /**
@@ -131,7 +133,7 @@ module.exports = function (value, outputPath) {
           for (let i = linkAttributes.length; i--; ) {
             externalLink.setAttribute(
               linkAttributes[i].name,
-              linkAttributes[i].value
+              linkAttributes[i].value,
             )
           }
         }
@@ -152,9 +154,9 @@ module.exports = function (value, outputPath) {
                   .filter((relValStr) => relValStr.trim())
                   .map((relValStr) => relValStr.toLowerCase())
                   .concat(['noopener', 'noreferrer'])
-                  .sort()
+                  .sort(),
               ),
-            ].join(' ')
+            ].join(' '),
           )
         }
         externalLink.innerHTML = link.innerHTML

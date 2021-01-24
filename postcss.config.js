@@ -1,18 +1,18 @@
 module.exports = {
   plugins: [
     require('postcss-preset-env')({
-      "stage": 0
+      stage: 0,
     }),
     require('cssnano')({
-      "preset": [
-        "advanced",
+      preset: [
+        'advanced',
         {
-          "discardComments": {
-            "removeAll": true
+          discardComments: {
+            removeAll: true,
           },
-          "reduceIdents": false
-        }
-      ]
-    })
+          reduceIdents: false,
+        },
+      ],
+    }),
   ],
-};
+}

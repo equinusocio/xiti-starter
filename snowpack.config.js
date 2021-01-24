@@ -7,9 +7,11 @@ module.exports = {
   },
   plugins: [
     /* https://www.snowpack.dev/reference/configuration#plugins */
-    "@snowpack/plugin-postcss",
-    ['@snowpack/plugin-run-script', { cmd: 'eleventy', watch: '$1 --watch --quiet' }],
-
+    '@snowpack/plugin-postcss',
+    [
+      '@snowpack/plugin-run-script',
+      { cmd: 'eleventy', watch: '$1 --watch --quiet' },
+    ],
   ],
   routes: [
     /* https://www.snowpack.dev/guides/routing#nav-primary
@@ -19,11 +21,11 @@ module.exports = {
   ],
   optimize: {
     /* https://www.snowpack.dev/guides/optimize-and-bundle#option-1%3A-built-in-optimizations */
-    "preload": true,
-    "splitting": true,
-    "treeshake": true,
-    "minify": true,
-    "target": 'es2018'
+    preload: true,
+    splitting: true,
+    treeshake: true,
+    minify: true,
+    target: 'es2018',
   },
   packageOptions: {
     /* https://www.snowpack.dev/reference/configuration#packageoptions */
@@ -35,4 +37,4 @@ module.exports = {
   buildOptions: {
     /* https://www.snowpack.dev/reference/configuration#buildoptions */
   },
-};
+}
