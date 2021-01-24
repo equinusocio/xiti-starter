@@ -18,7 +18,6 @@ module.exports = {
     "preload": true,
     "splitting": true,
     "treeshake": true,
-    "bundle": true,
     "minify": true,
     "target": 'es2018'
   },
