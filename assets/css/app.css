@@ -1,0 +1,64 @@
+body {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier,
+    monospace;
+  min-height: 100vh;
+  padding: 0;
+}
+
+main {
+  max-width: 75ch;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 100px 32px;
+}
+
+header {
+  margin-bottom: 64px;
+}
+
+a {
+  display: inline-block;
+}
+
+nav > a + a {
+  margin-left: 16px;
+}
+
+a[aria-current='page'],
+a[aria-current='page']:hover {
+  color: var(--ne-global-foreground);
+}
+
+*:not(:hover) > .permalink {
+  display: none;
+}
+
+.code-wrapper {
+  margin: 40px 0;
+}
+
+.iframes-wrapper {
+  margin: 40px 0;
+}
+
+figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+[data-whatintent='mouse'] a:focus,
+[data-whatintent='mouse'] a:visited:focus {
+  outline: none;
+}
+
+.turbolinks-progress-bar {
+  height: 5px;
+  top: 4px;
+  left: 4px;
+  right: 20px;
+  border-radius: 5px;
+  background-color: var(--accent-color, #34f);
+}

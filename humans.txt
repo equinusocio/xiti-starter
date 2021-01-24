@@ -1,0 +1,10 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Mattia Astorino -- Designer & Developer -- @equinusocio
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, POSTCSS, Javascript, 11ty

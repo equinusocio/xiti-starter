@@ -1,0 +1,43 @@
+{
+  "name": "xity-starter",
+  "version": "1.2.0",
+  "private": true,
+  "description": "A blog-ready 11ty starter based on PostCSS and Parcel, with a RSS feed and Native Elements.",
+  "author": "Mattia Astorino",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/equinusocio/xity-starter"
+  },
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "test": "echo \"This template does not include a test runner by default.\" && exit 1",
+    "format": "prettier --write \"src/**/*.js\"",
+    "lint": "prettier --check \"src/**/*.js\"",
+    "update:deps": "yarn upgrade-interactive --latest && yarn upgrade",
+    "update:cssdb": "npx browserslist@latest --update-db"
+  },
+  "browserslist": [
+    "last 1 Chrome versions",
+    "last 1 Firefox versions",
+    "last 1 Safari versions",
+    "last 1 Edge versions"
+  ],
+  "dependencies": {
+    "@11ty/eleventy-plugin-rss": "1.1.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "3.0.6",
+    "@tbranyen/jsdom": "13.0.0",
+    "canvas-confetti": "1.2.0",
+    "eleventy-plugin-pwa": "1.0.8",
+    "html-minifier": "4.0.0",
+    "slugify": "1.4.6",
+    "turbolinks": "5.2.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "0.11.0",
+    "@snowpack/plugin-run-script": "2.3.0",
+    "prettier": "2.0.5",
+    "snowpack": "3.0.1"
+  }
+}

@@ -1,0 +1,12 @@
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+  <main tabindex="-1">
+    {% include "header.njk" %}
+    {% if title %}
+      <h1>{{ title }}</h1>
+    {% endif %}
+
+    {{ content | safe }}
+  </main>
+{% endblock %}

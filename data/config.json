@@ -1,0 +1,14 @@
+{
+  "name": "XITY - Eleventy blog/site starter",
+  "shortDesc": "I'm Mattia Astorino, UX Engineer in Milan and member of Open Source Design.",
+  "url": "https://xity-starter.netlify.app",
+  "lang": "en",
+  "authorHandle": "@equinusocio",
+  "authorName": "Mattia Astorino",
+  "paymentPointer": "$ilp.uphold.com/9ebKEYaNiGUf",
+  "syntaxTheme": "prism-material-light.css",
+  "permalinkClass": ["permalink"],
+  "iframeClass": ["iframes-wrapper"],
+  "codeClass": ["code-wrapper"],
+  "figureClass": ["figure"]
+}
