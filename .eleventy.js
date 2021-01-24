@@ -8,9 +8,24 @@ const date = require('./utils/filters/date.js')
 const fs = require('fs')
 
 /**
- * Import site configuration
+ * Define Eleventy custom paths
  */
-const siteConfig = require('./xity.config.js')
+const PATHS = {
+  // => /pages
+  input: 'pages',
+  // => /components
+  includes: '../components',
+  // => /components/layouts
+  layouts: `../components/layouts`,
+  // => /data
+  data: '../data',
+  // => /_output
+  output: '_output',
+  // => /[PATH.INPUT]/blog
+  blog: 'blog',
+  // => /static
+  static: 'static'
+}
 
 module.exports = function (eleventyConfig) {
   /**
@@ -63,7 +78,7 @@ module.exports = function (eleventyConfig) {
   const livePosts = (post) => post.date <= now && !post.data.draft
   eleventyConfig.addCollection('posts', (collection) => {
     return [
-      ...collection.getFilteredByGlob(`./pages/blog/**/*`).filter(livePosts),
+      ...collection.getFilteredByGlob(`./${PATHS.input}/${PATHS.blog}/**/*`).filter(livePosts),
     ]
   })
 
@@ -78,29 +93,19 @@ module.exports = function (eleventyConfig) {
    */
   return {
     dir: {
-      input: 'pages',
-      includes: '../components',
-      layouts: `../components/layouts`,
-      data: '../data',
-      output: '_output',
+      input: PATHS.input,
+      includes: PATHS.includes,
+      layouts: PATHS.layouts,
+      data: PATHS.data,
+      output: PATHS.output,
     },
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
     templateFormats: [
       // Templates:
-      'md',
-      'njk',
-      'html',
+      'md', 'njk', 'html',
       // Static Assets:
-      'css',
-      'jpeg',
-      'jpg',
-      'png',
-      'webp',
-      'avif',
-      'svg',
-      'woff',
-      'woff2',
+      'css', 'jpeg', 'jpg', 'png', 'webp', 'avif', 'svg', 'woff', 'woff2',
     ],
   }
 }
