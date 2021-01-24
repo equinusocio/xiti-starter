@@ -16,7 +16,7 @@
   </head>
   <body>
     {% block content %}{% endblock content %}
-    {# <script>
+    <script>
       {% if not env.IS_DEV %}
         if ('serviceWorker' in navigator) {
           window.addEventListener('load', () => {
@@ -24,6 +24,6 @@
           });
         }
       {% endif %}
-    </script> #}
+    </script>
   </body>
 </html>

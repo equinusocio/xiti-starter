@@ -1,3 +1,3 @@
-// module.exports = {
-//   IS_DEV: process.env.ELEVENTY_ENV !== 'production'
-// }
+module.exports = {
+  IS_DEV: process.env.ELEVENTY_ENV !== 'production'
+}

@@ -5,7 +5,9 @@ module.exports = {
     assets: { url: '/static' },
   },
   plugins: [
-    ['@snowpack/plugin-run-script', { cmd: 'eleventy', watch: '$1 --watch' }],
+    "@snowpack/plugin-postcss",
+    ['@snowpack/plugin-run-script', { cmd: 'eleventy', watch: '$1 --watch --quiet' }],
+
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
