@@ -10,7 +10,7 @@ const fs = require('fs')
 /**
  * Import site configuration
  */
-const siteConfig = require('./data/config.json')
+const siteConfig = require('./xity.config.js')
 
 module.exports = function (eleventyConfig) {
   /**

@@ -28,7 +28,7 @@ Bullet list with some typography elements:
 
 ## Code highlights
 
-XITY provides code highlighting using [Prism](https://prismjs.com/). By default it uses the [Material Theme Lighter](https://github.com/PrismJS/prism-themes/tree/master/themes) as a color scheme. If you want to change the theme, put the `css` file inside the `assets/css` folder and set the name inside `_data/config.json`.
+XITY provides code highlighting using [Prism](https://prismjs.com/). By default it uses the [Material Theme Lighter](https://github.com/PrismJS/prism-themes/tree/master/themes) as a color scheme. If you want to change the theme, put the `css` file inside the `assets/css` folder and set the name inside `xity.config.js`.
 
 ```jsx
 const MyComponent = props => (

@@ -1,7 +1,7 @@
 <header>
-  {% if navigation.items %}
+  {% if config.navigation %}
     <nav>
-      {% for item in navigation.items %}
+      {% for item in config.navigation %}
         {% set relExternal = '' %}
         {% set isCurrent = '' %}
 

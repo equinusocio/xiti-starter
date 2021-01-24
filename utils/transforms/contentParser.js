@@ -1,7 +1,7 @@
 const jsdom = require('@tbranyen/jsdom')
 const { JSDOM } = jsdom
 const slugify = require('slugify')
-const eleventyConfig = require('../../data/config.json')
+const eleventyConfig = require('../../xity.config.js')
 
 function setClass(element, list) {
   list.map((item) => element.classList.add(item))
