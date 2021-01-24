@@ -11,7 +11,7 @@ module.exports = {
     [
       '@snowpack/plugin-run-script',
       { cmd: 'eleventy', watch: '$1 --watch --quiet' },
-    ],
+    ]
   ],
   routes: [
     /* https://www.snowpack.dev/guides/routing#nav-primary
