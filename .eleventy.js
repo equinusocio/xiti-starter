@@ -5,7 +5,6 @@ const htmlDate = require('./utils/filters/htmlDate.js')
 const rssPlugin = require('@11ty/eleventy-plugin-rss')
 const pwaPlugin = require('eleventy-plugin-pwa')
 const date = require('./utils/filters/date.js')
-const fs = require('fs')
 
 /**
  * Define Eleventy custom paths
