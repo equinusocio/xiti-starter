@@ -63,13 +63,7 @@ module.exports = function (value, outputPath) {
      * Get all the headings inside the post
      */
     const articleHeadings = [
-      ...document.querySelectorAll('
-        article h2,
-        article h3,
-        article h4,
-        article h5,
-        article h6'
-      ),
+      ...document.querySelectorAll('article h2, article h3, article h4, article h5, article h6'),
     ]
     if (articleHeadings.length) {
       /**

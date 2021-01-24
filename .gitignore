@@ -9,6 +9,7 @@
 /dist
 /bundle
 /build
+/_output
 
 # Created by https://www.gitignore.io/api/node,macos,windows
 # Edit at https://www.gitignore.io/?templates=node,macos,windows

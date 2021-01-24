@@ -25,18 +25,18 @@
     "last 1 Edge versions"
   ],
   "dependencies": {
-    "@11ty/eleventy-plugin-rss": "1.1.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "3.0.6",
-    "@tbranyen/jsdom": "13.0.0",
+    "@11ty/eleventy-plugin-rss": "^1.1.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.6",
+    "@tbranyen/jsdom": "^13.0.0",
     "canvas-confetti": "1.2.0",
-    "eleventy-plugin-pwa": "1.0.8",
-    "html-minifier": "4.0.0",
-    "slugify": "1.4.6",
-    "turbolinks": "5.2.0"
+    "eleventy-plugin-pwa": "^1.0.8",
+    "html-minifier": "^4.0.0",
+    "slugify": "^1.4.6",
+    "turbolinks": "^5.2.0"
   },
   "devDependencies": {
     "@11ty/eleventy": "0.11.0",
-    "@snowpack/plugin-run-script": "2.3.0",
+    "@snowpack/plugin-run-script": "^2.3.0",
     "prettier": "2.0.5",
     "snowpack": "3.0.1"
   }
