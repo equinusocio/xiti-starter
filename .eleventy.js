@@ -65,7 +65,7 @@ module.exports = function (eleventyConfig) {
     return [
       ...collection
       .getFilteredByGlob(
-        `./src/blog/**/*`
+        `./pages/blog/**/*`
       )
       .filter(livePosts),
     ]
@@ -133,6 +133,8 @@ module.exports = function (eleventyConfig) {
       'jpeg',
       'jpg',
       'png',
+      'webp',
+      'avif',
       'svg',
       'woff',
       'woff2',

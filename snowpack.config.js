@@ -15,7 +15,12 @@ module.exports = {
   ],
   optimize: {
     /* Example: Bundle your final build: */
-    // "bundle": true,
+    "preload": true,
+    "splitting": true,
+    "treeshake": true,
+    "bundle": true,
+    "minify": true,
+    "target": 'es2018'
   },
   packageOptions: {
     /* ... */
