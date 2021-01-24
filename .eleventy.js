@@ -67,39 +67,6 @@ module.exports = function (eleventyConfig) {
     ]
   })
 
-  /**
-   * Override BrowserSync Server options
-   *
-   * @link https://www.11ty.dev/docs/config/#override-browsersync-server-options
-   */
-  eleventyConfig.setBrowserSyncConfig({
-    notify: false,
-    open: true,
-    snippetOptions: {
-      rule: {
-        match: /<\/head>/i,
-        fn: function (snippet, match) {
-          return snippet + match
-        },
-      },
-    },
-    // Set local server 404 fallback
-    callbacks: {
-      ready: function (err, browserSync) {
-        const content_404 = fs.readFileSync('dist/404.html')
-
-        browserSync.addMiddleware('*', (req, res) => {
-          // Provides the 404 content without redirect.
-          res.writeHead(404, {
-            'Content-Type': 'text/html',
-          })
-          res.write(content_404)
-          res.end()
-        })
-      },
-    },
-  })
-
   /*
    * Disable use gitignore for avoiding ignoring of /bundle folder during watch
    * https://www.11ty.dev/docs/ignores/#opt-out-of-using-.gitignore

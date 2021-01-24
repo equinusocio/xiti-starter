@@ -98,7 +98,7 @@ yarn update:cssdb
 
 ## Configurations
 
-You can easily configure your site by changing the settings inside `src/_data/config.json`.
+You can easily configure your site by changing the settings inside the `xity.config.js` configuration file.
 
 Here are the default settings you will get with this project structure:
 
@@ -137,13 +137,5 @@ Here are the default settings you will get with this project structure:
 
   // CSS classes applied to highlighted code snippets
   "codeClass": ["code-wrapper"],
-
-  // Filesystem folders. "blogdir" and "includes" must be relative to "src"
-  "paths": {
-    "src": "src",
-    "blogdir": "blog",
-    "includes": "components",
-    "output": "dist"
-  }
 }
 ```
