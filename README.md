@@ -95,7 +95,7 @@ yarn update:deps
 # Update the cssdb definitions. Run it every month.
 yarn update:cssdb
 
-# Runt prettier against md, css, and js files
+# Run prettier against md, css, and js files
 yarn lint
 ```
 
