@@ -78,7 +78,7 @@ yarn start
 
 ### Building the production version
 
-To generate your static site/blog you can run the following command. It will prepare the content assets and run optimisations for a production release.
+To generate your static site you can run the following command. It will build the project and run optimisations for a production release inside the `/build` folder.
 
 ```bash
 yarn build
