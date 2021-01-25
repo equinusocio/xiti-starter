@@ -1,0 +1,6 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ne-global-background: #000;
+    --ne-global-foreground: #8691aa;
+  }
+}

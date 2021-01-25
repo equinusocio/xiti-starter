@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ config.lang }}" prefix="og: http://ogp.me/ns#">
+<html lang="{{ config.lang }}" data-theme="auto" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -17,6 +17,8 @@
   <body>
     {% block content %}{% endblock content %}
     <script>
+      document.documentElement.dataset.theme = localStorage.getItem('theme') || 'auto';
+
       {% if not env.IS_DEV %}
         if ('serviceWorker' in navigator) {
           window.addEventListener('load', () => {

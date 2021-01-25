@@ -3,8 +3,7 @@ module.exports = {
    * Site data
    */
   name: 'XITY - Eleventy blog/site starter',
-  shortDesc:
-    "I'm Mattia Astorino, UX Engineer in Milan and member of Open Source Design.",
+  shortDesc: "I'm Mattia Astorino, UX Engineer in Milan and member of Open Source Design.",
   url: 'https://xity-starter.netlify.app',
   lang: 'en',
   /**

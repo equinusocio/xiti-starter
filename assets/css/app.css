@@ -1,3 +1,6 @@
+@import '/assets/css/dark.css';
+@import '/assets/css/light.css';
+
 body {
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier,
     monospace;
@@ -17,23 +20,36 @@ main {
 
 header {
   margin-bottom: 64px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  grid-gap: 2rem;
 }
 
-a {
-  display: inline-block;
+nav {
+  flex-shrink: 0;
+
+  & a {
+    display: inline-block;
+
+    &[aria-current='page'],
+    &[aria-current='page']:hover {
+      color: var(--ne-global-foreground);
+    }
+  }
+
+  & > a + a {
+    margin-left: 1rem;
+  }
 }
 
-nav > a + a {
-  margin-left: 16px;
-}
 
-a[aria-current='page'],
-a[aria-current='page']:hover {
-  color: var(--ne-global-foreground);
-}
+.permalink {
+  margin-left: 1rem;
 
-*:not(:hover) > .permalink {
-  display: none;
+  @nest *:not(:hover) > & {
+    display: none;
+  }
 }
 
 .code-wrapper {

@@ -28,3 +28,7 @@ title: XITY Starter
 - <del>Posts pagination</del><ins><b>done</b></ins>
 - <del>Tags and tags collections</del><ins><b>done</b></ins>
 - <del>Service Worker</del><ins><b>done</b></ins>
+
+
+> <mark>Note</mark>
+> The design of this demo site is not polished to avoid bloating the starter with `css` code useless for your project.
