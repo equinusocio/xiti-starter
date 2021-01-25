@@ -70,7 +70,7 @@ yarn install
 
 ### Running the local development mode
 
-This command will run `elventy` and the `snowpack` with auto reload.
+This command will run `eleventy` and the `snowpack` with auto reload.
 
 ```bash
 yarn start
@@ -95,7 +95,7 @@ yarn update:deps
 # Update the cssdb definitions. Run it every month.
 yarn update:cssdb
 
-# Runt prettier againts md, css, and js files
+# Runt prettier against md, css, and js files
 yarn lint
 ```
 
