@@ -13,7 +13,10 @@
 {% endif %}
 
 <title>{{ pageTitle }}</title>
-<link rel="canonical" href="{{ currentUrl }}"/>
+
+{% if canonical %}
+  <link rel="canonical" href="{{ canonical }}"/>
+{% endif %}
 
 <meta property="og:site_name" content="{{ siteTitle }}"/>
 <meta property="og:title" content="{{ pageTitle }}"/>
