@@ -2,16 +2,11 @@
   {% if config.navigation %}
     <nav>
       {% for item in config.navigation %}
-        {% set relExternal = '' %}
-        {% set isCurrent = '' %}
-
-        {% if item.external %}
-          {% set relExternal = ' rel="external" target="_blank"' %}
-        {% endif %}
-        {% if page.url == item.url %}
-          {% set isCurrent = ' aria-current="page"' %}
-        {% endif %}
-        <a href="{{ item.url }}"{{ relExternal | safe }}{{ isCurrent | safe }}>
+        <a
+          href="{{ item.url }}"
+          {% if page.url == item.url %} aria-current="page" {% endif %}
+          {% if item.external == item.url %} rel="external" target="_blank" {% endif %}
+        >
           <b>{{ item.text }}</b>
         </a>
       {% endfor %}
