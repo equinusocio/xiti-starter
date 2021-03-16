@@ -59,7 +59,7 @@ A blog-ready 11ty starter based on PostCSS and Snowpack, with a RSS feed and Nat
 You can download the scaffolding to create a new project structure with one command:
 
 ```bash
-npx degit equinusocio/xity-starter
+npx degit equinusocio/xity-starter#main
 ```
 
 This command will download the project to your current working directory and remove the `.github` and `.vscode` folders. After the project structure has been downloaded, you should install the required dependencies:
