@@ -107,38 +107,52 @@ Here are the default settings you will get with this project structure:
 
 ```js
 {
-  // Site name used as default site title
-  "name": "Eleventy blog/site starter",
-
-  // Short description used as default page description
-  "shortDesc": "A starting point to make blogs and sites. It’s not a template.",
-
-  // Default document language
-  "lang": "en",
-
-  // The default website base url
-  "url": "localhost",
-
-  // Social shares author username
-  "authorHandle": "@equinusocio",
-
-  // Social shares author name
-  "authorName": "Mattia Astorino",
-
-  // Tip payment url, if you want to monetize your site
-  "paymentPointer": "$twitter.xrptipbot.com/equinusocio",
-
-  // Code highlight theme, must reflect the file name inside /assets/css.
-  // Remove to disable it
-  "syntaxTheme": "prism-material-light.css",
-
-  // CSS classes applied to the "#" anchor elements inside headings
-  "permalinkClass": ["permalink"],
-
-  // CSS classes applied to the iframes wrapper
-  "iframesClass": ["iframes-wrapper"],
-
-  // CSS classes applied to highlighted code snippets
-  "codeClass": ["code-wrapper"],
+  /**
+   * Site data
+   */
+  name: 'XITY - Eleventy blog/site starter',
+  shortDesc: "I'm Mattia Astorino, UX Engineer in Milan and member of Open Source Design.",
+  url: 'https://xity-starter.netlify.app',
+  lang: 'en',
+  /**
+   * Socials and monetisation
+   */
+  authorHandle: '@equinusocio',
+  authorName: 'Mattia Astorino',
+  paymentPointer: '$ilp.uphold.com/9ebKEYaNiGUf',
+  /**
+   * Content settings
+   */
+  syntaxTheme: 'prism-material-light.css',
+  permalinkClass: ['permalink'],
+  iframeClass: ['iframes-wrapper'],
+  codeClass: ['code-wrapper'],
+  figureClass: ['figure'],
+  /**
+   * Main navigation items.
+   * Used by components/header.njk
+   */
+  navigation: [
+    {
+      text: 'Home',
+      url: '/',
+      external: false,
+    },
+    {
+      text: 'Blog',
+      url: '/blog/',
+      external: false,
+    },
+    {
+      text: 'Sample Page',
+      url: '/sample-page/',
+      external: false,
+    },
+    {
+      text: 'GitHub',
+      url: 'https://github.com/equinusocio/xity-starter',
+      external: true,
+    },
+  ],
 }
 ```
