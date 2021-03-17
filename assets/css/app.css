@@ -1,3 +1,8 @@
+/* Themes */
+
+@import './themes/light.theme.css';
+@import './themes/dark.theme.css';
+
 body {
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier,
     monospace;
@@ -39,7 +44,6 @@ nav {
     margin-left: 1rem;
   }
 }
-
 
 .permalink {
   margin-left: 1rem;

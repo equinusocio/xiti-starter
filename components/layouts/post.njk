@@ -4,8 +4,8 @@
 {# Populate <head> with post-related assets #}
 {% block head %}
   {% if config.syntaxTheme %}
-    <link rel="preload" as="style" href="/static/css/{{ config.syntaxTheme }}"/>
-    <link rel="stylesheet" href="/static/css/{{ config.syntaxTheme }}"/>
+    <link rel="preload" as="style" href="/css/{{ config.syntaxTheme }}"/>
+    <link rel="stylesheet" href="/css/{{ config.syntaxTheme }}"/>
   {% endif %}
 {% endblock %}
 

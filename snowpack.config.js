@@ -3,7 +3,8 @@ module.exports = {
   mount: {
     /* https://www.snowpack.dev/reference/configuration#mount */
     _output: { url: '/', static: true },
-    assets: { url: '/static' },
+    'assets/js': { url: '/js' },
+    'assets/css/vendors': { url: '/css' },
   },
   plugins: [
     /* https://www.snowpack.dev/reference/configuration#plugins */
@@ -11,7 +12,14 @@ module.exports = {
     [
       '@snowpack/plugin-run-script',
       { cmd: 'eleventy', watch: '$1 --watch --quiet' },
-    ]
+    ],
+    [
+      '@snowpack/plugin-run-script',
+      {
+        cmd: 'postcss ./assets/css/app.css -o ./_output/css/index.css',
+        watch: '$1 --watch',
+      },
+    ],
   ],
   routes: [
     /* https://www.snowpack.dev/guides/routing#nav-primary

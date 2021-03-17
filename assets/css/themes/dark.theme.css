@@ -1,7 +1,3 @@
-:root {
-  --ne-global-background: #fafafa;
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --ne-global-background: #000;
