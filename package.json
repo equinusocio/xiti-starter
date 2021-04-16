@@ -23,9 +23,7 @@
     "last 1 Safari versions",
     "last 1 Edge versions"
   ],
-  "dependencies": {
-    "turbolinks": "^5.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
     "@11ty/eleventy-plugin-rss": "^1.1.0",

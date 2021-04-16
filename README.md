@@ -32,7 +32,6 @@ A blog-ready 11ty starter based on PostCSS and Snowpack, with a RSS feed and Nat
 - [PostCSS][] and [PostCSS Preset Env][] to process your CSS
 - [cssnano][] to minimize, merge and optimize the CSS output
 - [Snowpack][] for a simple asset build pipeline
-- [Turbolinks][] makes navigating your web application faster
 - [What Input][] to show outline only when navigating with keyboard
 
 [eleventy]: https://11ty.dev 'Static site generator'
@@ -40,7 +39,6 @@ A blog-ready 11ty starter based on PostCSS and Snowpack, with a RSS feed and Nat
 [postcss preset env]: https://preset-env.cssdb.org 'Use tomorrow’s CSS today'
 [cssnano]: https://cssnano.co 'A modular minifier based on the PostCSS ecosystem'
 [snowpack]: https://www.snowpack.dev/ 'Web application bundler'
-[turbolinks]: https://github.com/turbolinks/turbolinks
 [what input]: https://github.com/ten1seven/what-input 'A global utility for tracking the current input method'
 [native elements]: https://native-elements.dev
 [eleventy-plugin-pwa]: https://github.com/okitavera/eleventy-plugin-pwa 'An Eleventy plugin to generate service worker'
