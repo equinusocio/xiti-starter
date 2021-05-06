@@ -7,7 +7,17 @@ module.exports = {
     'assets/css/vendors': { url: '/css' },
   },
   plugins: [
-    /* https://www.snowpack.dev/reference/configuration#plugins */
+      /* https://www.snowpack.dev/reference/configuration#plugins */
+    ["@snowpack/plugin-babel", {
+      transformOptions: {
+        "presets": [
+          "@babel/preset-env"
+        ],
+        "plugins": [
+          "@babel/plugin-proposal-class-properties"
+        ]
+      }
+    }],
     '@snowpack/plugin-postcss',
     [
       '@snowpack/plugin-run-script',
@@ -15,10 +25,7 @@ module.exports = {
     ],
     [
       '@snowpack/plugin-run-script',
-      {
-        cmd: 'postcss ./assets/css/app.css -o ./_output/css/index.css',
-        watch: '$1 --watch',
-      },
+      { cmd: 'postcss ./assets/css/app.css -o ./_output/css/index.css', watch: '$1 --watch' },
     ],
   ],
   routes: [
@@ -27,20 +34,13 @@ module.exports = {
      * {"match": "routes", "src": ".*", "dest": "/index.html"},
      */
   ],
-  optimize: {
-    /* https://www.snowpack.dev/guides/optimize-and-bundle#option-1%3A-built-in-optimizations */
-    preload: true,
-    splitting: true,
-    treeshake: true,
-    minify: true,
-    target: 'es2018',
-  },
   packageOptions: {
     /* https://www.snowpack.dev/reference/configuration#packageoptions */
   },
   devOptions: {
     // Eleventy updates multiple files at once, so add a 300ms delay before we trigger a browser update
     hmrDelay: 300,
+    output: "stream"
   },
   buildOptions: {
     /* https://www.snowpack.dev/reference/configuration#buildoptions */
