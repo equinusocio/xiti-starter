@@ -35,7 +35,7 @@
     "cssnano-preset-advanced": "^4.0.7",
     "eleventy-plugin-pwa": "^1.0.8",
     "html-minifier": "^4.0.0",
-    "postcss": "^8.2.4",
+    "postcss": "^8.2.10",
     "postcss-cli": "^8.3.1",
     "postcss-dark-theme-class": "^0.5.1",
     "postcss-import": "^14.0.0",
